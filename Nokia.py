@@ -87,9 +87,95 @@ match settings_input:
                             3: Character support
                             """)
 print("Invalid input. Returning to main menu.")
- case 3:  
+match settings_input:
+case 3:  
             print("""
 	      1:Chat
 
-	       """)	
-
+	       """)
+ case 4:  
+                print("""
+                4 -> Call register
+                  1: Missed calls
+                  2: Received calls
+                  3: Dialled numbers
+                  4: Erase recent call lists
+                  5: Show call duration
+                  6: Show call cost
+                  7: Call cost settings
+                  8: Prepaid credit
+                """)
+call_register_input = int(input("Press 5, 6, or 7 for options or 0 to return: "))
+match call_register_input:
+ case 5:
+                        print("""
+                        5 -> Show call duration
+                          1: Last call duration
+                          2: All calls duration
+                          3: Received calls duration
+                          4: Dialled calls duration
+                          5: Clear timers
+                        """)
+ case 6:
+                        print("""
+                        6 -> Show call costs
+                          1: Last call cost
+                          2: All calls cost
+                          3: Clear counters
+                        """)
+ case 7:
+                        print("""
+                        7 -> Call cost settings
+                          1: Call cost limit
+                          2: Show costs in
+                        """)
+ case 0:
+ 			pass
+ case _:
+                   print("Invalid input. Return to main menu: ")     
+ case 5: 
+                print("""
+                5 -> Tones
+                  1: Ringing tone
+                  2: Ringing volume
+                  3: Incoming call alert
+                  4: Composer
+                  5: Message alert tone
+                  6: Keypad tones
+                  7: Warning and game tones
+                  8: Vibrating alert
+                  9: Screen saver
+                """)
+ case 6: 
+                print("""
+                6 -> Settings
+                  1: Call settings
+                      1: Automatic redial
+                      2: Speed dialling
+                      3: Call waiting options
+                      4: Own number sending
+                      5: Phone line in use
+                      6: Automatic answer
+                  2: Phone settings
+                  3: Security settings
+                  4: Restore factory settings
+                """)
+ case 7:
+                print("Call divert")
+ case 8:
+                print("Games")
+ case 9:
+                print("Calculator")
+ case 10:
+                print("Reminders")
+ case 11:
+                print("Clock")
+ case 12:
+                print("Profiles")
+ case 13:
+                print("SIM services")
+ case 0:  
+                print("Exiting Nokia menu. Goodbye!")
+                running = False
+ case _:
+                
