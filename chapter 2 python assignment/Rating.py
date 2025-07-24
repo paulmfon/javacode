@@ -5,7 +5,7 @@ while True:
             break 
         else:
             print("Error: Please enter a number between 1 and 10.")
-    except ValueError:
+    else:
         print("Error: Please enter a valid integer.")
 
 
