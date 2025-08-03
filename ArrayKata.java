@@ -1,7 +1,8 @@
+import java.util.Arrays;
 public class ArrayKata {
     public int maximumIn(int[] arr) {
         if (arr == null || arr.length == 0) {
-            throw new IllegalArgumentException("Array cannot be null or empty");
+            
         }
         int max = arr[0];
         for (int num : arr) {
@@ -14,7 +15,7 @@ public class ArrayKata {
 
     public int minimumIn(int[] arr) {
         if (arr == null || arr.length == 0) {
-            throw new IllegalArgumentException("Array cannot be null or empty");
+            
         }
         int min = arr[0];
         for (int num : arr) {
@@ -27,7 +28,7 @@ public class ArrayKata {
 
     public int sumOf(int[] arr) {
         if (arr == null) {
-            throw new IllegalArgumentException("Array cannot be null");
+            
         }
         int sum = 0;
         for (int num : arr) {
@@ -38,7 +39,7 @@ public class ArrayKata {
 
     public int sumOfEvenNumbersIn(int[] arr) {
         if (arr == null) {
-            throw new IllegalArgumentException("Array cannot be null");
+            
         }
         int sum = 0;
         for (int num : arr) {
@@ -51,7 +52,7 @@ public class ArrayKata {
 
     public int sumOfOddNumbersIn(int[] arr) {
         if (arr == null) {
-            throw new IllegalArgumentException("Array cannot be null");
+            
         }
         int sum = 0;
         for (int num : arr) {
@@ -64,7 +65,7 @@ public class ArrayKata {
 
     public int[] maximumAndMinimumOf(int[] arr) {
         if (arr == null || arr.length == 0) {
-            throw new IllegalArgumentException("Array cannot be null or empty");
+            
         }
         int min = arr[0];
         int max = arr[0];
@@ -81,7 +82,7 @@ public class ArrayKata {
 
     public int noOfOddNumbersIn(int[] arr) {
         if (arr == null) {
-            throw new IllegalArgumentException("Array cannot be null");
+            
         }
         int count = 0;
         for (int num : arr) {
@@ -94,7 +95,7 @@ public class ArrayKata {
 
     public int noOfEvenNumbersIn(int[] arr) {
         if (arr == null) {
-            throw new IllegalArgumentException("Array cannot be null");
+            
         }
         int count = 0;
         for (int num : arr) {
@@ -107,7 +108,7 @@ public class ArrayKata {
 
     public int[] evenNumbersIn(int[] arr) {
         if (arr == null) {
-            throw new IllegalArgumentException("Array cannot be null");
+            
         }
         int count = noOfEvenNumbersIn(arr);
         int[] result = new int[count];
@@ -122,7 +123,7 @@ public class ArrayKata {
 
     public int[] oddNumbersIn(int[] arr) {
         if (arr == null) {
-            throw new IllegalArgumentException("Array cannot be null");
+            
         }
         int count = noOfOddNumbersIn(arr);
         int[] result = new int[count];
@@ -137,26 +138,26 @@ public class ArrayKata {
 
     public int[] squareNumbersIn(int[] arr) {
         if (arr == null) {
-            throw new IllegalArgumentException("Array cannot be null");
+            
         }
         int count = 0;
         for (int num : arr) {
             if (num >= 0) {
-                int sqrt = (int) Math.sqrt(num);
-                if (sqrt * sqrt == num) {
+          int sqrt = (int) Math.sqrt(num);
+           if (sqrt * sqrt == num) {
                     count++;
-                }
-            }
+          }
+         }
         }
         int[] result = new int[count];
         int index = 0;
         for (int num : arr) {
-            if (num >= 0) {
-                int sqrt = (int) Math.sqrt(num);
-                if (sqrt * sqrt == num) {
-                    result[index++] = num;
-                }
-            }
+          if (num >= 0) {
+          int sqrt = (int) Math.sqrt(num);
+           if (sqrt * sqrt == num) {
+               result[index++] = num;
+              }
+         }
         }
         return result;
     
